@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samantha - Personal Profile and Bio">
+    <meta name="author" content="Samantha">
+    <title>Samantha</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="content/samantha-bio.txt" as="fetch" crossorigin>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-spinner">
+            <div class="spinner-ring"></div>
+            <p class="loading-text">Loading Samantha's Profile...</p>
+        </div>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">Samantha</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#bio" class="nav-link">Biography</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="title-line">Hello, I'm</span>
+                        <span class="title-name">Samantha</span>
+                    </h1>
+                    <p class="hero-subtitle" id="hero-subtitle">
+                        Welcome to my digital space
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="learn-more-btn" aria-describedby="hero-subtitle">
+                            Learn More About Me
+                        </button>
+                        <button class="btn btn-secondary" id="contact-btn">
+                            Get in Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-decoration" aria-hidden="true">
+                    <div class="floating-element floating-element-1"></div>
+                    <div class="floating-element floating-element-2"></div>
+                    <div class="floating-element floating-element-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro" id="about-intro">
+                            I'm passionate about creating meaningful connections and sharing authentic experiences through thoughtful communication.
+                        </p>
+                        <div class="about-details" id="about-details">
+                            <div class="detail-item">
+                                <h3 class="detail-title">My Approach</h3>
+                                <p class="detail-text">I believe in the power of genuine conversation and meaningful dialogue.</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3 class="detail-title">My Values</h3>
+                                <p class="detail-text">Authenticity, empathy, and continuous learning guide everything I do.</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3 class="detail-title">My Mission</h3>
+                                <p class="detail-text">To create positive impact through thoughtful interaction and understanding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biography Section -->
+        <section class="bio" id="bio" aria-labelledby="bio-title">
+            <div class="container">
+                <h2 id="bio-title" class="section-title">My Story</h2>
+                <div class="bio-content">
+                    <div class="bio-text-container">
+                        <div id="bio-text" class="bio-text" role="region" aria-live="polite">
+                            <!-- Bio content will be loaded dynamically -->
+                            <p>Loading biography...</p>
+                        </div>
+                        <div class="bio-actions">
+                            <button class="btn btn-outline" id="expand-bio-btn">
+                                <span class="btn-text">Read Full Story</span>
+                                <span class="btn-icon" aria-hidden="true">↓</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Text Features -->
+        <section class="features" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title">Interactive Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card" tabindex="0" role="button" aria-describedby="feature-1-desc">
+                        <div class="feature-icon" aria-hidden="true">💭</div>
+                        <h3 class="feature-title">Thoughtful Responses</h3>
+                        <p id="feature-1-desc" class="feature-description">
+                            Engage with carefully crafted content that adapts to your interests.
+                        </p>
+                    </div>
+                    <div class="feature-card" tabindex="0" role="button" aria-describedby="feature-2-desc">
+                        <div class="feature-icon" aria-hidden="true">✨</div>
+                        <h3 class="feature-title">Dynamic Content</h3>
+                        <p id="feature-2-desc" class="feature-description">
+                            Experience content that changes and evolves with each interaction.
+                        </p>
+                    </div>
+                    <div class="feature-card" tabindex="0" role="button" aria-describedby="feature-3-desc">
+                        <div class="feature-icon" aria-hidden="true">🎯</div>
+                        <h3 class="feature-title">Personalized Experience</h3>
+                        <p id="feature-3-desc" class="feature-description">
+                            Discover content tailored to create meaningful connections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <p class="contact-intro">
+                            I'd love to hear from you. Whether you have a question, want to collaborate, or just want to say hello, feel free to reach out.
+                        </p>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Your Name</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" required aria-describedby="name-error">
+                                <span id="name-error" class="form-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">Email Address</label>
+                                <input type="email" id="contact-email" name="email" class="form-input" required aria-describedby="email-error">
+                                <span id="email-error" class="form-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea id="contact-message" name="message" class="form-textarea" rows="5" required aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="form-error" role="alert"></span>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-loading" aria-hidden="true">Sending...</span>
+                                </button>
+                            </div>
+                        </form>
+                        <div id="form-success" class="form-success" role="alert" aria-live="polite" style="display: none;">
+                            <p>Thank you for your message! I'll get back to you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; <span id="current-year">2024</span> Samantha. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <button class="footer-link" id="accessibility-btn" aria-label="Accessibility options">
+                        Accessibility
+                    </button>
+                    <button class="footer-link" id="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-text">Dark Mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Accessibility Panel -->
+    <div id="accessibility-panel" class="accessibility-panel" role="dialog" aria-labelledby="accessibility-title" aria-hidden="true">
+        <div class="panel-content">
+            <div class="panel-header">
+                <h3 id="accessibility-title">Accessibility Options</h3>
+                <button class="panel-close" id="accessibility-close" aria-label="Close accessibility panel">×</button>
+            </div>
+            <div class="panel-body">
+                <div class="accessibility-option">
+                    <label class="option-label">
+                        <input type="checkbox" id="reduce-motion" class="option-input">
+                        <span class="option-text">Reduce Motion</span>
+                    </label>
+                </div>
+                <div class="accessibility-option">
+                    <label class="option-label">
+                        <input type="checkbox" id="high-contrast" class="option-input">
+                        <span class="option-text">High Contrast</span>
+                    </label>
+                </div>
+                <div class="accessibility-option">
+                    <label class="option-label">
+                        <span class="option-text">Text Size</span>
+                        <select id="text-size" class="option-select">
+                            <option value="small">Small</option>
+                            <option value="normal" selected>Normal</option>
+                            <option value="large">Large</option>
+                            <option value="extra-large">Extra Large</option>
+                        </select>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    
+    <!-- Error Boundary -->
+    <script>
+        window.addEventListener('error', function(event) {
+            console.error('JavaScript error:', event.error);
+            // Gracefully handle errors without breaking the user experience
+            const errorElement = document.createElement('div');
+            errorElement.style.display = 'none';
+            errorElement.setAttribute('aria-live', 'polite');
+            errorElement.textContent = 'Some features may not be working properly. Please refresh the page.';
+            document.body.appendChild(errorElement);
+        });
+
+        // Set current year
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
